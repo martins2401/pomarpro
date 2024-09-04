@@ -1,0 +1,49 @@
+section {
+    background-color: rgb(248, 144, 9);
+    color: #000000;
+    padding: 10px ;
+    text-align: center;
+    width: 15vw;
+    height: 100vh;
+    position: absolute;
+    left:0;
+    top:0;
+    flex-direction: column;
+}
+nav{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    gap:10px;
+    
+    
+    details{
+
+        summary{border: 5px rgba(13, 136, 13, 0.76) solid; 
+            
+        }
+
+        div{    
+            display: flex;
+    flex-direction: column;
+    padding: 10px;
+    gap: 10px;
+        }
+    }
+
+}
+img{padding:-60;
+width: 15vw;
+
+;
+}
+
+a {
+    color: #000000;
+    text-decoration: none;
+    font-family: Arial;
+}
+
+a:hover {
+    text-decoration: underline;
+}

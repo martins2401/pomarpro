@@ -1,0 +1,73 @@
+<app-menu></app-menu>
+<div class="pagina">
+    <header>
+        <h1>Pomar   | Arvore   </h1>
+    </header>
+    <form [formGroup]="formulario">
+        <div>
+            <mat-form-field appearance="outline" color="accent">
+               <mat-label>Defensiva</mat-label>
+                <input matInput formControlName="defensiva">
+            </mat-form-field>
+            <mat-form-field appearance="outline" color="accent">
+                <mat-label>Fertilizante</mat-label>
+                <input matInput formControlName="fertilizante">
+            </mat-form-field>
+        </div>
+        <mat-form-field appearance="outline" color="accent">
+            <mat-label>Ultima verificação</mat-label>
+            <input matInput formControlName="ultima_verificacao" [matDatepicker]="ultima_verif">
+            <mat-datepicker-toggle matSuffix [for]="ultima_verif"></mat-datepicker-toggle>
+            <mat-datepicker #ultima_verif></mat-datepicker>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline" color="accent">
+            <mat-label>Tipo</mat-label>
+            <input matInput formControlName="tipo">
+        </mat-form-field>
+        <mat-form-field appearance="outline" color="accent">
+            <mat-label>situacao</mat-label>
+            <input matInput formControlName="situacao">
+        </mat-form-field>
+        <mat-form-field appearance="outline" color="accent">
+            <mat-label>Pomar</mat-label>
+            <input matInput formControlName="pomar">
+        </mat-form-field>
+
+
+
+        <div class="controles">
+            <button mat-raised-button [disabled]="formulario.enabled" (click)="onIncluir()">Incluir</button>
+            <button mat-raised-button [disabled]="formulario.invalid" (click)="onSalvar()">Salvar</button>
+            <button ma mat-raised-button [disabled]="formulario.disabled " (click)="onCancelar()"> Cancelar</button>
+        </div>
+
+    </form>
+    <div class="relatorio">
+        <h2>Arvore</h2>
+        <table>
+            <tr>
+                <th>Ação</th>
+                <th>defensiva</th>
+                <Th>fertilizante</Th>
+                <th>ultima_verificacao</th>
+                <th>Tipo</th>
+                <th>situacao</th>
+                <th>pomar</th>
+            </tr>
+            <tr *ngFor="let usuario of relatorio">
+                <td><button>Excluir</button></td>
+                <td>{{usuario.defensiva}}
+                <td>{{usuario.fertilizante}}</td>
+                <td>{{usuario.ultima_verificacao}}
+                <td>{{usuario.tipo}}</td>
+                <td>{{usuario.situacao}}</td>
+                <td>{{usuario.pomar}}</td>
+            </tr>
+        </table>
+
+    </div>
+    <div>
+
+    </div>
+</div>

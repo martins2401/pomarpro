@@ -1,0 +1,23 @@
+
+//estilo de tabela de relatorio
+.relatorio{
+    width: 80%;
+    height: 30%;
+    padding-top: 10px;
+    h2{ font-family: arial;
+
+    }
+    table{
+        width:  100%;
+        font-family: arial;
+        th{
+            border-bottom:1px #CCC solid ;
+            padding: 3px;
+            text-align: left;
+        }
+        td{
+            border-bottom: 3px #CCC;
+            padding: 3px;
+        }
+    }
+}
